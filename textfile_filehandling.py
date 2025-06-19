@@ -1,0 +1,15 @@
+fp=open("Ipl.txt","w")
+n=int(input("enter the number of students"))
+for i in range(n):
+    sl_no=input("enter the serial number:")
+    ipl_team=input("enter the team name:")
+    win_year=input("enter the winning year:")
+    fp.write(str(sl_no)+"\t")
+    fp.write(ipl_team+"\t")
+    fp.write(win_year+"\n")
+fp.close()
+fp=open("Ipl.txt","r")
+for i in range(n):
+    data=fp.readline()
+    print(data,end="")
+fp.close()
